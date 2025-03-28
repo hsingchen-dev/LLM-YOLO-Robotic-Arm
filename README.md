@@ -50,6 +50,9 @@ https://www.youtube.com/watch?v=lS7rUFcXonQ
 https://www.youtube.com/watch?v=jr8Sl4M8Fsw
 [This version of the system adds voice control]
 
+## Demo Video  SKYNET-8
+https://www.youtube.com/watch?v=Eo-8q8rrNC4
+[This version also incorporates YOLO-based object detection and inverse kinematics, enabling the system to recognize simple objects and perform basic grasping actions based on their detected coordinates.]
 
 # Notice
 This repository is part of a job-seeking and partnership portfolio.  
