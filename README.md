@@ -1,7 +1,12 @@
 # LLM-Robotic-Arm
 Robotic arm system powered by LLM (ChatGPT) and YOLO for voice-controlled object manipulation.
-# Overview
 
+#  Agent-SKYNET
+Sky Net is a modular software agent developed by our team to bridge large language models (LLMs) and real-world robotic control.
+Acting as an intelligent interface between natural language and machine execution, Sky Net uses ChatGPT as its core reasoning engine. Upon receiving voice or text commands, the agent performs semantic parsing, context understanding, and decision-making. It then coordinates with the perception module (YOLO object detection) and the control layer (inverse kinematics, servo drivers) to execute the appropriate physical actions via a 6-DOF robotic arm.
+This architecture allows real-time, intuitive human-robot interaction, enabling language-driven manipulation tasks in real environments. Sky Net represents a step toward embodied AI — where machines not only understand language but act meaningfully in the physical world.
+
+# Overview
 LLM-Robotic-Arm integrates object detection (YOLO) and LLM-based natural language understanding (ChatGPT) to enable voice-guided control of a 6-DOF robotic arm. The system supports real-time object detection, socket-based communication, and inverse kinematics for precise motion execution.
 
 # Features
@@ -33,14 +38,20 @@ This project is developed by a multidisciplinary team of robotics researchers an
 
 We are committed to building intelligent and accessible robotic systems, with experience in academic research, competitive robotics, and early-stage commercialization.
 
+## Demo Video SKYNET-5
+https://www.youtube.com/watch?v=69e78PqmeNM&t=3s
+[This version of the system demonstrates basic language understanding capabilities, allowing the robotic arm to interpret simple human commands and respond with corresponding physical actions.]
+
+## Demo Video  SKYNET-6
+https://www.youtube.com/watch?v=lS7rUFcXonQ
+[In this version, the large language model is guided to learn from human behavior, robotic cognition, and psychology, simulating aspects of human-like consciousness. It also incorporates understanding of Japanese honorific language.]
+
+## Demo Video  SKYNET-6.1
+https://www.youtube.com/watch?v=jr8Sl4M8Fsw
+[This version of the system adds voice control]
+
+
 # Notice
 This repository is part of a job-seeking and partnership portfolio.  
 Full source code is not publicly available.  
 Please contact us directly for further discussion or collaboration.
-
-## Demo Video 1[
-https://www.youtube.com/watch?v=69e78PqmeNM&t=3s
-
-## Demo Video 1
-
-
