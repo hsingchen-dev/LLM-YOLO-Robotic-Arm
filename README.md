@@ -13,7 +13,7 @@ LLM-Robotic-Arm integrates object detection (YOLO) and LLM-based natural languag
 
 - Voice-based object manipulation  
 - YOLO-powered real-time object detection  
-- LLM (ChatGPT/Gemini) for natural language understanding  
+- LLM (ChatGPT) for natural language understanding  
 - Raspberry Pi-based deployment  
 - Inverse kinematics and servo control  
  
