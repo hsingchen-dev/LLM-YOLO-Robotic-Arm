@@ -32,8 +32,8 @@ This project is developed by a multidisciplinary team of robotics researchers an
 
 - **Sun Yan** – Researcher in human behavior and robotic interaction, contributing to the behavioral logic behind the system.  
   *Ph.D. student, Kobe University.*
-  
-- **Haruki Maruyama** – Responsible for Japanese cultural adaptation of prompts in the project.
+
+- **Haruki Maruyama** – Responsible for Japanese cultural adaptation of prompts in the project.  
   *Faculty of Liberal Arts, The University of Tokyo.*
 
 - **Jiang Qilong** – In charge of the Streamlit interface and user interaction design, ensuring smooth UI/UX experience.  
