@@ -24,14 +24,17 @@ This project is developed by a multidisciplinary team of robotics researchers an
 - **Hang Xingchen (Project Lead)** – Specializes in robotic arm control, inverse kinematics, YOLO integration, and LLM-based system design. Former research assistant with experience in government presentations and international collaboration. Recipient of JST recommendation.  
   *Master’s student, Kobe University.*
 
-- **Li Tianyang** – Responsible for 3D modeling (CAD/SolidWorks), robot mechanical design, and prototyping.  
+- **Li Tianyang** – Responsible for 3D modeling (CAD/SolidWorks), robot mechanical design, and prototyping. Also works on YOLO-based object grasping and inverse kinematics tuning.
   *Master’s student, Kobe University.*
 
-- **Sun Yusan** – Focuses on system integration, socket communication, and backend development.  
+- **Sun Yushan** – Focuses on system integration, socket communication, and backend development.  
   *Master’s student, Kobe University.*
 
 - **Sun Yan** – Researcher in human behavior and robotic interaction, contributing to the behavioral logic behind the system.  
   *Ph.D. student, Kobe University.*
+  
+- **Haruki Maruyama** – Responsible for Japanese cultural adaptation of prompts in the project.
+  *Faculty of Liberal Arts, The University of Tokyo.*
 
 - **Jiang Qilong** – In charge of the Streamlit interface and user interaction design, ensuring smooth UI/UX experience.  
   *Background in design and software engineering.*
