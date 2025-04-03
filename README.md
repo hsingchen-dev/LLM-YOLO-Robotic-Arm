@@ -1,5 +1,13 @@
 # LLM-Robotic-Arm
 Robotic arm system powered by LLM (ChatGPT) and YOLO for voice-controlled object manipulation.
+# プロジェクト概要
+私たちは、大規模言語モデル（LLM）とロボット制御の統合を研究する学際的なチームです。本プロジェクトでは、ChatGPT + YOLO + 逆運動学を活用し、ロボットアームが自然言語の指示を理解し、適切な動作を実行できるようにすることを目指しています。
+本研究の主なテーマ：
+自然言語処理（NLP）：LLM を活用した意味解析
+コンピュータビジョン（CV）：YOLO を用いた物体認識
+ロボット制御：逆運動学によるロボットアームの動作計算
+ヒューマン・ロボット・インタラクション：音声入力と動作指示の最適化
+本プロジェクトは、神戸大学・東京大学をはじめとする研究者による共同研究として進められています。
 
 #  Agent-SKYNET
 Sky Net is a modular software agent developed by our team to bridge large language models (LLMs) and real-world robotic control.
