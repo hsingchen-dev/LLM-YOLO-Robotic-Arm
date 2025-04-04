@@ -1,4 +1,4 @@
-# LLM-Robotic-Arm
+# LLM-YOLO-Robotic-Arm
 Robotic arm system powered by LLM (ChatGPT) and YOLO for voice-controlled object manipulation.
 # プロジェクト概要
 私たちは、生成AIと日本の伝統的な自動化技術の融合を研究する学際的なチームです。本プロジェクトでは、ChatGPT + YOLO + 逆運動学を活用し、ロボットアームが自然言語の指示を理解し、日本の高度な自動化技術と連携して適切な動作を実行できるようにすることを目指しています。
