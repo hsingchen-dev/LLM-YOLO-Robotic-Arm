@@ -12,7 +12,7 @@ Natural Language Processing (NLP): Semantic analysis using large language models
 Computer Vision (CV): Object recognition using YOLO
 Robot Control: Motion calculation of a robotic arm through inverse kinematics
 Human-Robot Interaction: Optimization of voice input and action instructions
-This project is jointly developed by researchers from Kobe University, The University of Tokyo, and other institutions.
+
 
 
 #  Agent-SKYNET
@@ -46,9 +46,6 @@ This project is developed by a multidisciplinary team of robotics researchers an
 
 - **Sun Yan** – Researcher in human behavior and robotic interaction, contributing to the behavioral logic behind the system.  
   *Ph.D. student, Kobe University.*
-
-- **Haruki Maruyama** – Responsible for Japanese cultural adaptation of prompts in the project.  
-  *Faculty of Liberal Arts, The University of Tokyo.*
 
 - **Jiang Qilong** – In charge of the Streamlit interface and user interaction design, ensuring smooth UI/UX experience.  
   *Background in design and software engineering.*
