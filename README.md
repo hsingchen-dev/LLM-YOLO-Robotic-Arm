@@ -33,10 +33,11 @@ LLM-Robotic-Arm integrates object detection (YOLO) and LLM-based natural languag
  
 # Team
 
-This project is developed by a multidisciplinary team of robotics researchers and engineers.
+This project is organized by an interdisciplinary team of doctoral and master's students, with each member contributing based on their respective areas of expertise.
 
-- **Hang Xingchen (Project Lead)** – Specializes in robotic arm control, inverse kinematics, YOLO integration, and LLM-based system design. Former research assistant with experience in government presentations 
+- **Hang Xingchen (Project Lead)** – Specializes in robotic arm control, inverse kinematics, YOLO integration, and LLM-based system design. Former research assistant with experience in government presentations.
   *Master’s student, Kobe University.*
+  *The University of Tokyo.*
 
 - **Li Tianyang** – Responsible for 3D modeling (CAD/SolidWorks), robot mechanical design, and prototyping. Also works on YOLO-based object grasping and inverse kinematics tuning.
   *Master’s student, Kobe University.*
@@ -68,7 +69,6 @@ https://www.youtube.com/watch?v=jr8Sl4M8Fsw
 https://www.youtube.com/watch?v=Eo-8q8rrNC4
 [This version also incorporates YOLO-based object detection and inverse kinematics, enabling the system to recognize simple objects and perform basic grasping actions based on their detected coordinates.]
 
-# Notice
-This repository is part of a job-seeking and partnership portfolio.  
+# Notice 
 Full source code is not publicly available.  
 Please contact us directly for further discussion or collaboration.
