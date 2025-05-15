@@ -38,7 +38,7 @@ This project is organized by an interdisciplinary team of doctoral and master's 
 - **Hang Xingchen (Project Lead)** – Specializes in robotic arm control, inverse kinematics, YOLO integration, and LLM-based system design. Former research assistant with experience in government presentations.
   *Kobe University.*
   
-- **Haruki Maruyama ** –  In charge of prompt design and adjustment of dialogue style in Japanese. Supports the generation of natural Japanese responses and understanding of cultural context.
+- **Haruki Maruyama**  –  In charge of prompt design and adjustment of dialogue style in Japanese. Supports the generation of natural Japanese responses and understanding of cultural context.
   *The University of Tokyo.*
 
 - **Li Tianyang** – Responsible for 3D modeling (CAD/SolidWorks), robot mechanical design, and prototyping. Also works on YOLO-based object grasping and inverse kinematics tuning.
