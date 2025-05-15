@@ -42,10 +42,10 @@ This project is organized by an interdisciplinary team of doctoral and master's 
   *The University of Tokyo.*
 
 - **Li Tianyang** – Responsible for 3D modeling (CAD/SolidWorks), robot mechanical design, and prototyping. Also works on YOLO-based object grasping and inverse kinematics tuning.
-  * Kobe University.*
+  *Kobe University.*
 
 - **Sun Yushan** – Focuses on system integration, socket communication, and backend development.  
-  * Kobe University.*
+  *Kobe University.*
 
 - **Sun Yan** – Researcher in human behavior and robotic interaction, contributing to the behavioral logic behind the system.  
   *Kobe University.*
