@@ -36,17 +36,19 @@ LLM-Robotic-Arm integrates object detection (YOLO) and LLM-based natural languag
 This project is organized by an interdisciplinary team of doctoral and master's students, with each member contributing based on their respective areas of expertise.
 
 - **Hang Xingchen (Project Lead)** – Specializes in robotic arm control, inverse kinematics, YOLO integration, and LLM-based system design. Former research assistant with experience in government presentations.
-  *Master’s student, Kobe University.*
+  *Kobe University.*
+  
+- **Haruki Maruyama ** –  In charge of prompt design and adjustment of dialogue style in Japanese. Supports the generation of natural Japanese responses and understanding of cultural context.
   *The University of Tokyo.*
 
 - **Li Tianyang** – Responsible for 3D modeling (CAD/SolidWorks), robot mechanical design, and prototyping. Also works on YOLO-based object grasping and inverse kinematics tuning.
-  *Master’s student, Kobe University.*
+  * Kobe University.*
 
 - **Sun Yushan** – Focuses on system integration, socket communication, and backend development.  
-  *Master’s student, Kobe University.*
+  * Kobe University.*
 
 - **Sun Yan** – Researcher in human behavior and robotic interaction, contributing to the behavioral logic behind the system.  
-  *Ph.D. student, Kobe University.*
+  *Kobe University.*
 
 - **Jiang Qilong** – In charge of the Streamlit interface and user interaction design, ensuring smooth UI/UX experience.  
   *Background in design and software engineering.*
