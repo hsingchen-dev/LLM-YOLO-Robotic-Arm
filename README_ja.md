@@ -99,7 +99,7 @@ https://www.youtube.com/watch?v=jr8Sl4M8Fsw
 https://www.youtube.com/watch?v=Eo-8q8rrNC4  
 YOLOベースの物体検出と逆運動学が統合され、単純な物体を認識し、把持動作を実行できます。
 
-**## 実演ビデオ SKYNET-10 **
+## 実演ビデオ SKYNET-10 
 https://www.youtube.com/watch?v=zrWmjCPV1bM
 本システムの最新版 SKYNET 10 は、従来のシステム検証バージョンを基盤として正式にリリースされた安定型モデルです。初期のプロトタイプと比較し、SKYNET 10 は複数の重要な技術的進化と最適化を遂げました。
 
