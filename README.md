@@ -44,6 +44,10 @@ This project is organized by an interdisciplinary team of doctoral and master's 
 - **Li Tianyang** – Responsible for 3D modeling (CAD/SolidWorks), robot mechanical design, and prototyping. Also works on YOLO-based object grasping and inverse kinematics tuning.
   *Kobe University.*
 
+- **Fuzuki Tasaka** – Responsible for market research, AI implementation, and system evaluation.  
+  Acts as a bridge between system development and real-world deployment by conducting user research, evaluating agent behavior, and performing usability testing. Also contributes to improving prototypes and proposing solutions to social issues.  
+  *Kobe University*
+  
 - **Sun Yushan** – Focuses on system integration, socket communication, and backend development.  
   *Kobe University.*
 
