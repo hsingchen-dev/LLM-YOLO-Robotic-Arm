@@ -96,7 +96,15 @@ The master system is responsible for natural language understanding, speech proc
 
 The slave system, running on a Raspberry Pi, handles real-time robotic arm control, inverse kinematics computation, and direct actuator execution. This architecture ensures high responsiveness and modular deployment flexibility.]
 
-
+## Demo Video  SKYNET-11
+This system introduces a multi-target visual decision architecture that extends beyond conventional object recognition.
+Unlike the previous version, which could only identify a single target, this upgraded system is capable of analyzing multiple detected objects and selecting the most suitable one for grasping.
+Specifically, the YOLO module first detects all candidate objects within the scene and outputs their coordinates, confidence scores, and color information.
+These detection results are then merged with a second prompt (Prompt ②) that defines user preferences—such as “prefer clean and intact items,” “prefer objects closer to the image center,” and other tie-breaker rules.
+The combined data (annotated image + JSON detections + Prompt ②) is sent to a vision-enabled large language model (LLM).
+The vision LLM interprets both the visual content and the textual rules, performing semantic + visual reasoning to determine the optimal object for manipulation.
+It outputs a structured JSON response containing the target label, its coordinates, and a brief reason for selection.
+Through this approach, the system enables human-like decision-making in multi-object scenes—allowing robots not only to recognize objects, but also to choose intelligently based on context and preference.
 
 
 
