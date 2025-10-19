@@ -79,24 +79,21 @@ https://www.youtube.com/watch?v=Eo-8q8rrNC4
 [https://www.youtube.com/watch?v=Eo-8q8rrNC4](https://www.youtube.com/watch?v=zrWmjCPV1bM)
 [
 The latest version of our system, SKYNET 10, marks the official release of a stable model built upon our previous proof-of-concept version. Compared to the initial prototype, SKYNET 10 delivers significant technological advancements and system-level optimizations across multiple domains.
-
 Local Deployment of Large Language Model (LLM)
 The previously cloud-based ChatGPT API has been completely replaced with a lightweight, locally deployed LLM model. Additionally, we have developed a domain-specific prompt system to dramatically improve system stability, response speed, and privacy protection—ensuring reliable performance even in offline environments.
-
 On-Device ASR and TTS Modules
 The system is now fully independent from external APIs. Both Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) are processed locally, enabling enhanced real-time responsiveness, multi-language support, and customizable voice synthesis for more natural and flexible voice interaction.
-
 Proprietary User Interface (UI)
 To enhance usability and user experience, a custom-built UI interface has been implemented. It allows for real-time control of multiple system parameters, offering a more intuitive and interactive user environment tailored to various use cases.
-
 Distributed Architecture: Master & Slave Systems
 SKYNET 10 adopts a distributed architecture consisting of a master system and a slave system.
-
 The master system is responsible for natural language understanding, speech processing, overall system orchestration, and also executes YOLO-based visual object recognition, enabling intelligent decision-making by integrating both spoken and visual inputs.
-
 The slave system, running on a Raspberry Pi, handles real-time robotic arm control, inverse kinematics computation, and direct actuator execution. This architecture ensures high responsiveness and modular deployment flexibility.]
 
 ## Demo Video  SKYNET-11
+
+[https://www.youtube.com/watch?v=l8yuPjlxAhg
+[
 This system introduces a multi-target visual decision architecture that extends beyond conventional object recognition.
 Unlike the previous version, which could only identify a single target, this upgraded system is capable of analyzing multiple detected objects and selecting the most suitable one for grasping.
 Specifically, the YOLO module first detects all candidate objects within the scene and outputs their coordinates, confidence scores, and color information.
