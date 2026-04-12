@@ -56,6 +56,12 @@ This project is organized by an interdisciplinary team of doctoral and master's 
 
 - **Jiang Qilong** – In charge of the Streamlit interface and user interaction design, ensuring smooth UI/UX experience.  
   *Background in design and software engineering.*
+  *The University of Tokyo.*
+  
+- **Seiya Usuki**  
+  Contributed to system development and research activities as a project member.  
+  *Kobe University*
+  
 
 We are committed to building intelligent and accessible robotic systems, with experience in academic research, competitive robotics, and early-stage commercialization.
 
