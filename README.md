@@ -104,6 +104,34 @@ It outputs a structured JSON response containing the target label, its coordinat
 Through this approach, the system enables human-like decision-making in multi-object scenes—allowing robots not only to recognize objects, but also to choose intelligently based on context and preference.
 
 
+## Demo Video  SKYNET-11
+https://www.youtube.com/watch?v=7S0SW6Wzqks
+
+The latest version of the system employs a Large Language Model (LLM) not as a monolithic end-to-end controller, but as a hierarchically integrated reasoning module that progressively structures robotic behavior.
+
+Layer 1: Target Selection and Feature Understanding
+At the first layer, prompt engineering is used to enhance the LLM’s capability to distinguish object-level features.  
+Based on visual detection outputs, the LLM evaluates object categories, appearance-based characteristics, and grasp relevance, enabling **explicit and explainable target selection** among multiple candidates.
+
+Layer 2: Occlusion and Obstacle Reasoning
+After the target has been selected, the system moves to the occlusion reasoning stage.    
+Rather than relying purely on unconstrained visual inference, the framework introduces **structured geometric constraints**, including center-point coverage, relative spatial ordering, and bounding-box overlap.  
+The LLM then uses these inputs to resolve residual ambiguity and determine whether the target is blocked by an obstacle, and whether the occluding object should be removed prior to grasping.
+
+Layer 3: Execution via Inverse Kinematics
+Once the reasoning result is finalized, the selected strategy is converted into executable robot actions.  
+The positions of both target and obstacle objects are mapped into the robot coordinate system, and inverse kinematics is applied to calculate the required joint angles, enabling the robotic arm to perform grasping or obstacle-removal operations in physical space.
+
+Key Feature
+Through this hierarchical design, the LLM incrementally bridges high-level semantic reasoning and low-level physical execution, establishing a full pipeline of:
+**Perception → Reasoning → Decision → Execution**
+
+
+
+
+
+
+
 
 # Notice 
 Full source code is not publicly available.  
