@@ -93,6 +93,19 @@ LLM-Robotic-Armは、YOLOによる物体認識とChatGPTによる自然言語理
   *神戸大学*
 
 
+- **姜 啓龍（キョウ ケイリュウ）**  
+  Streamlit UI設計およびUX体験の最適化を担当。  
+  *デザインおよびソフトウェア工学の背景を持つ*  
+  *東京大学*
+
+- **臼杵 星弥（ウスキ セイヤ / Usuki Seiya）**  
+  プロジェクトメンバーとして、システム開発および研究活動を支援。  
+  *所属追記予定*
+
+
+
+
+
 
 ## 実演ビデオ SKYNET-5  
 https://www.youtube.com/watch?v=69e78PqmeNM&t=3s  
