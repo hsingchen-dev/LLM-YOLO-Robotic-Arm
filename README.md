@@ -104,7 +104,7 @@ It outputs a structured JSON response containing the target label, its coordinat
 Through this approach, the system enables human-like decision-making in multi-object scenes—allowing robots not only to recognize objects, but also to choose intelligently based on context and preference.
 
 
-## Demo Video  SKYNET-11
+## Demo Video  SKYNET-16
 https://www.youtube.com/watch?v=7S0SW6Wzqks
 
 The latest version of the system employs a Large Language Model (LLM) not as a monolithic end-to-end controller, but as a hierarchically integrated reasoning module that progressively structures robotic behavior.
@@ -115,7 +115,7 @@ Based on visual detection outputs, the LLM evaluates object categories, appearan
 
 Layer 2: Occlusion and Obstacle Reasoning
 After the target has been selected, the system moves to the occlusion reasoning stage.    
-Rather than relying purely on unconstrained visual inference, the framework introduces **structured geometric constraints**, including center-point coverage, relative spatial ordering, and bounding-box overlap.  
+Rather than relying purely on unconstrained visual inference, the framework introduces structured geometric constraints, including center-point coverage, relative spatial ordering, and bounding-box overlap.  
 The LLM then uses these inputs to resolve residual ambiguity and determine whether the target is blocked by an obstacle, and whether the occluding object should be removed prior to grasping.
 
 Layer 3: Execution via Inverse Kinematics
