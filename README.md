@@ -111,7 +111,7 @@ The latest version of the system employs a Large Language Model (LLM) not as a m
 
 Layer 1: Target Selection and Feature Understanding
 At the first layer, prompt engineering is used to enhance the LLM’s capability to distinguish object-level features.  
-Based on visual detection outputs, the LLM evaluates object categories, appearance-based characteristics, and grasp relevance, enabling **explicit and explainable target selection** among multiple candidates.
+Based on visual detection outputs, the LLM evaluates object categories, appearance-based characteristics, and grasp relevance, enabling explicit and explainable target selection among multiple candidates.
 
 Layer 2: Occlusion and Obstacle Reasoning
 After the target has been selected, the system moves to the occlusion reasoning stage.    
