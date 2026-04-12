@@ -54,8 +54,8 @@ This project is organized by an interdisciplinary team of doctoral and master's 
 - **Sun Yan** – Researcher in human behavior and robotic interaction, contributing to the behavioral logic behind the system.  
   *Kobe University.*
 
-- **Jiang Qilong** – In charge of the Streamlit interface and user interaction design, ensuring smooth UI/UX experience.  
-  *Background in design and software engineering.*
+- **Jiang Qilong** – In charge of the Streamlit interface and user interaction design, ensuring smooth UI/UX experience.<br>
+  *Background in design and software engineering.*<br>
   *The University of Tokyo.*
   
 - **Seiya Usuki**  
