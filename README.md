@@ -121,7 +121,7 @@ During the development of SKYNET-10, the system adopted a separation between a h
 | Host computer | Voice/text input, user interface, YOLO-based image recognition, language understanding and decision-making, and overall system coordination |
 | Communication | Information exchange between the host and embedded controller through socket communication |
 | Embedded controller: Raspberry Pi | Robot motion control, inverse-kinematics calculations, and execution of actuator commands |
-| Physical hardware | A 6-DOF robot arm, gripper, and servo drive system |
+| Physical hardware | A 5-DOF robot arm, gripper, and servo drive system |
 
 This architecture separates perception, interaction, and decision-making from physical motion execution, allowing the modules to be developed and adjusted individually.
 
