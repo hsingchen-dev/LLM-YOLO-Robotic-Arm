@@ -1,144 +1,284 @@
-Languages: [日本語](README_ja.md) | [English](README.md) 
-
+Languages: [日本語](README_ja.md) | [English](README.md)
 
 # LLM-YOLO-Robotic-Arm
-Robotic arm system powered by LLM (ChatGPT) and YOLO for voice-controlled object manipulation.
 
-# Introduction
-We are an interdisciplinary team dedicated to exploring the integration of generative AI with Japan’s traditional automation technologies.
-The goal of this project is to combine ChatGPT, YOLO, and inverse kinematics to enable a robotic arm to understand natural language commands and execute appropriate actions in coordination with Japan’s advanced automation systems.
-The main research themes include:
-Natural Language Processing (NLP): Semantic analysis using large language models (LLMs)
-Computer Vision (CV): Object recognition using YOLO
-Robot Control: Motion calculation of a robotic arm through inverse kinematics
-Human-Robot Interaction: Optimization of voice input and action instructions
+## A Hierarchical Robotic Manipulation System Integrating Visual Perception, Geometric Information, and LLMs/VLMs
 
+**Select a target, assess occlusion, and translate decisions into physical robot actions.**
 
+This project is a research prototype for a 5-DOF robot arm, built on conventional embedded robot-arm control and extended with image recognition and higher-level decision-making using LLMs/VLMs.
 
-#  Agent-SKYNET
-Sky Net is a modular software agent developed by our team to bridge large language models (LLMs) and real-world robotic control.
-Acting as an intelligent interface between natural language and machine execution, Sky Net uses ChatGPT as its core reasoning engine. Upon receiving voice or text commands, the agent performs semantic parsing, context understanding, and decision-making. It then coordinates with the perception module (YOLO object detection) and the control layer (inverse kinematics, servo drivers) to execute the appropriate physical actions via a 6-DOF robotic arm.
-This architecture allows real-time, intuitive human-robot interaction, enabling language-driven manipulation tasks in real environments. Sky Net represents a step toward embodied AI — where machines not only understand language but act meaningfully in the physical world.
+The robot arm’s mechanical structure, kinematics, and embedded control form the core of the system. YOLO-based visual perception and LLM/VLM-based instruction understanding, target selection, and occlusion assessment are integrated as higher-level functions.
 
-# Overview
-LLM-Robotic-Arm integrates object detection (YOLO) and LLM-based natural language understanding (ChatGPT) to enable voice-guided control of a 6-DOF robotic arm. The system supports real-time object detection, socket-based communication, and inverse kinematics for precise motion execution.
+Rather than allowing LLMs/VLMs to directly control the robot, the system connects their high-level decisions to coordinate transformations, inverse kinematics, and servo control. This supports target selection among multiple objects and the execution of grasping and occluder-removal actions on the physical robot.
 
-# Features
+This README focuses on the hierarchical architecture of **SKYNET-16**, introducing the system design, individual responsibilities, development history, and scope of the publicly available information.
 
-- Voice-based object manipulation  
-- YOLO-powered real-time object detection  
-- LLM (ChatGPT) for natural language understanding  
-- Raspberry Pi-based deployment  
-- Inverse kinematics and servo control  
- 
-# Team
+| Item | Description |
+| :--- | :--- |
+| Main application | Object manipulation and grasping with a robot arm |
+| Research focus | Target selection among multiple objects, occlusion assessment using geometric information, and connecting decisions to physical robot actions |
+| High-level decision-making | Instruction understanding, target selection, and action-strategy decisions using LLMs/VLMs |
+| Physical execution | Coordinate transformations, inverse kinematics, Raspberry Pi, and servo control |
+| Public release | A technical portfolio centered on research descriptions and physical demonstrations; some source code is not publicly available |
 
-This project is organized by an interdisciplinary team of doctoral and master's students, with each member contributing based on their respective areas of expertise.
+**[Watch the SKYNET-16 demonstration](https://www.youtube.com/watch?v=7S0SW6Wzqks)** · **[Watch the multi-object target-selection demonstration](https://www.youtube.com/watch?v=l8yuPjlxAhg)**
 
-- **Hang Xingchen (Project Lead)** – Specializes in robotic arm control, inverse kinematics, YOLO integration, and LLM-based system design. Former research assistant with experience in government presentations.
-  *Kobe University.*
-  
-- **Haruki Maruyama**  –  In charge of prompt design and adjustment of dialogue style in Japanese. Supports the generation of natural Japanese responses and understanding of cultural context.
-  *The University of Tokyo.*
+---
 
-- **Li Tianyang** – Responsible for 3D modeling (CAD/SolidWorks), robot mechanical design, and prototyping. Also works on YOLO-based object grasping and inverse kinematics tuning.
-  *Kobe University.*
+## 1. Research Objectives
 
-- **Fuzuki Tasaka** – Responsible for market research, AI implementation, and system evaluation.  
-  Acts as a bridge between system development and real-world deployment by conducting user research, evaluating agent behavior, and performing usability testing. Also contributes to improving prototypes and proposing solutions to social issues.  
-  *Kobe University*
-  
-- **Sun Yushan** – Focuses on system integration, socket communication, and backend development.  
-  *Kobe University.*
+Robot-arm manipulation is organized around three questions:
 
-- **Sun Yan** – Researcher in human behavior and robotic interaction, contributing to the behavioral logic behind the system.  
-  *Kobe University.*
+1. **What should the robot manipulate?** Select the target using natural-language instructions and visual information.
+2. **Can the target be manipulated directly?** Examine the spatial relationships between the target and surrounding objects to determine whether an occluding object needs to be removed first.
+3. **How should the decision be translated into motion?** Pass the selected target and action strategy to the physical robot through coordinate transformations and inverse kinematics.
 
-- **Jiang Qilong** – In charge of the Streamlit interface and user interaction design, ensuring smooth UI/UX experience.<br>
-  *Background in design and software engineering.*<br>
-  *The University of Tokyo.*
-  
-- **Seiya Usuki**  
-  Contributed to system development and research activities as a project member.  
-  *Kobe University*
-  
+The research focuses not on conversation with an LLM itself, but on **connecting perception, decision-making, and motion within a robot-arm manipulation system**.
 
-We are committed to building intelligent and accessible robotic systems, with experience in academic research, competitive robotics, and early-stage commercialization.
+Early versions examined the connection between language instructions and physical actions. Subsequent versions extended the system to vision-guided grasping, target selection among multiple candidates, and occlusion assessment using geometric information.
 
-## Demo Video SKYNET-5
-https://www.youtube.com/watch?v=69e78PqmeNM&t=3s
-[This version of the system demonstrates basic language understanding capabilities, allowing the robotic arm to interpret simple human commands and respond with corresponding physical actions.]
+---
 
-## Demo Video  SKYNET-6
-https://www.youtube.com/watch?v=lS7rUFcXonQ
-[In this version, the large language model is guided to learn from human behavior, robotic cognition, and psychology, simulating aspects of human-like consciousness. It also incorporates understanding of Japanese honorific language.]
+## 2. Featured Demonstration: SKYNET-16
 
-## Demo Video  SKYNET-6.1
-https://www.youtube.com/watch?v=jr8Sl4M8Fsw
-[This version of the system adds voice control]
+**[Open the demonstration video](https://www.youtube.com/watch?v=7S0SW6Wzqks)**
 
-## Demo Video  SKYNET-8
-https://www.youtube.com/watch?v=Eo-8q8rrNC4
-[This version also incorporates YOLO-based object detection and inverse kinematics, enabling the system to recognize simple objects and perform basic grasping actions based on their detected coordinates.]
+SKYNET-16 does not treat an LLM/VLM as a single end-to-end controller. Instead, it uses LLMs/VLMs as higher-level reasoning components for target selection and occlusion assessment. An execution layer handles the subsequent motion calculations using coordinate transformations and inverse kinematics.
 
-## Demo Video  SKYNET-10
-[https://www.youtube.com/watch?v=Eo-8q8rrNC4](https://www.youtube.com/watch?v=zrWmjCPV1bM)
-[
-The latest version of our system, SKYNET 10, marks the official release of a stable model built upon our previous proof-of-concept version. Compared to the initial prototype, SKYNET 10 delivers significant technological advancements and system-level optimizations across multiple domains.
-Local Deployment of Large Language Model (LLM)
-The previously cloud-based ChatGPT API has been completely replaced with a lightweight, locally deployed LLM model. Additionally, we have developed a domain-specific prompt system to dramatically improve system stability, response speed, and privacy protection—ensuring reliable performance even in offline environments.
-On-Device ASR and TTS Modules
-The system is now fully independent from external APIs. Both Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) are processed locally, enabling enhanced real-time responsiveness, multi-language support, and customizable voice synthesis for more natural and flexible voice interaction.
-Proprietary User Interface (UI)
-To enhance usability and user experience, a custom-built UI interface has been implemented. It allows for real-time control of multiple system parameters, offering a more intuitive and interactive user environment tailored to various use cases.
-Distributed Architecture: Master & Slave Systems
-SKYNET 10 adopts a distributed architecture consisting of a master system and a slave system.
-The master system is responsible for natural language understanding, speech processing, overall system orchestration, and also executes YOLO-based visual object recognition, enabling intelligent decision-making by integrating both spoken and visual inputs.
-The slave system, running on a Raspberry Pi, handles real-time robotic arm control, inverse kinematics computation, and direct actuator execution. This architecture ensures high responsiveness and modular deployment flexibility.]
+### Layer 1 — Target Selection and Feature Interpretation
 
-## Demo Video  SKYNET-11
+YOLO detection results and image information are used to examine object categories, visual characteristics, and suitability as manipulation targets.
 
-[https://www.youtube.com/watch?v=l8yuPjlxAhg
-[
-This system introduces a multi-target visual decision architecture that extends beyond conventional object recognition.
-Unlike the previous version, which could only identify a single target, this upgraded system is capable of analyzing multiple detected objects and selecting the most suitable one for grasping.
-Specifically, the YOLO module first detects all candidate objects within the scene and outputs their coordinates, confidence scores, and color information.
-These detection results are then merged with a second prompt (Prompt ②) that defines user preferences—such as “prefer clean and intact items,” “prefer objects closer to the image center,” and other tie-breaker rules.
-The combined data (annotated image + JSON detections + Prompt ②) is sent to a vision-enabled large language model (LLM).
-The vision LLM interprets both the visual content and the textual rules, performing semantic + visual reasoning to determine the optimal object for manipulation.
-It outputs a structured JSON response containing the target label, its coordinates, and a brief reason for selection.
-Through this approach, the system enables human-like decision-making in multi-object scenes—allowing robots not only to recognize objects, but also to choose intelligently based on context and preference.
+LLMs/VLMs receive the user’s instructions and target-selection criteria to select an object from multiple candidates. Prompt design is used to make the selected target and the reasons for that selection explicit.
 
+### Layer 2 — Occlusion and Obstacle Assessment Using Geometric Information
 
-## Demo Video  SKYNET-16
-https://www.youtube.com/watch?v=7S0SW6Wzqks
+After selecting a target, the system examines its spatial relationships with surrounding objects. Rather than relying solely on unconstrained reasoning over images, this stage uses the following structured inputs:
 
-The latest version of the system employs a Large Language Model (LLM) not as a monolithic end-to-end controller, but as a hierarchically integrated reasoning module that progressively structures robotic behavior.
+- Whether the target object’s center point is covered.
+- Relative spatial relationships between objects.
+- Bounding-box overlap.
 
-Layer 1: Target Selection and Feature Understanding
-At the first layer, prompt engineering is used to enhance the LLM’s capability to distinguish object-level features.  
-Based on visual detection outputs, the LLM evaluates object categories, appearance-based characteristics, and grasp relevance, enabling explicit and explainable target selection among multiple candidates.
+LLMs/VLMs reference these geometric inputs together with image information to assess whether the target is occluded and whether an occluding object should be removed before grasping.
 
-Layer 2: Occlusion and Obstacle Reasoning
-After the target has been selected, the system moves to the occlusion reasoning stage.    
-Rather than relying purely on unconstrained visual inference, the framework introduces structured geometric constraints, including center-point coverage, relative spatial ordering, and bounding-box overlap.  
-The LLM then uses these inputs to resolve residual ambiguity and determine whether the target is blocked by an obstacle, and whether the occluding object should be removed prior to grasping.
+This stage addresses **occlusion assessment using relationships in the image plane**. It does not demonstrate full-robot collision checking in three-dimensional space or guarantee the safety of a motion path.
 
-Layer 3: Execution via Inverse Kinematics
-Once the reasoning result is finalized, the selected strategy is converted into executable robot actions.  
-The positions of both target and obstacle objects are mapped into the robot coordinate system, and inverse kinematics is applied to calculate the required joint angles, enabling the robotic arm to perform grasping or obstacle-removal operations in physical space.
+### Layer 3 — Physical Execution Through Coordinate Transformations and Inverse Kinematics
 
-Key Feature
-Through this hierarchical design, the LLM incrementally bridges high-level semantic reasoning and low-level physical execution, establishing a full pipeline of:
+The position of the selected target or occluding object is transformed into the robot coordinate frame. Inverse kinematics is then used to calculate joint angles. These results are passed to the control layer to carry out grasping or occluder-removal actions.
+
+This division of responsibilities **separates high-level decisions from the calculations and control processes that move the physical robot**.
+
+---
+
+## 3. System Architecture
+
+### 3.1 Processing Flow from Perception to Execution
+
+```text
+User voice / text instruction          Camera image
+             |                             |
+             |                    YOLO object detection
+             |                             |
+             +--------------+--------------+
+                            |
+                            v
+              LLM/VLM-based target selection
+                            |
+                            v
+           Occlusion / action-strategy assessment
+                 using geometric information
+                            |
+                            v
+                 Coordinate transformations
+                            |
+                            v
+                     Inverse kinematics
+                            |
+                            v
+              Servo control / robot-arm motion
+```
+
 **Perception → Reasoning → Decision → Execution**
 
+The diagram is a conceptual representation of the processing flow. It does not show every implementation-level call sequence or all details of post-execution observation, success assessment, and retry handling.
 
+### 3.2 Role of Agent-SKYNET
 
+Agent-SKYNET is a modular software agent that connects natural-language instructions, visual perception, high-level decision-making, and robot control.
 
+It receives voice or text instructions and coordinates LLM/VLM-based decision processes, YOLO-based perception, communication with hardware, and action execution.
 
+In this project, the agent is positioned not as a single model that directly controls every aspect of the robot, but as **a software layer that connects perception, decision-making, and execution modules**.
 
+### 3.3 Division of Responsibilities Between the Host and Embedded Controller
 
+During the development of SKYNET-10, the system adopted a separation between a host computer and an embedded controller.
 
-# Notice 
-Full source code is not publicly available.  
-Please contact us directly for further discussion or collaboration.
+| Component | Main responsibilities |
+| :--- | :--- |
+| Host computer | Voice/text input, user interface, YOLO-based image recognition, language understanding and decision-making, and overall system coordination |
+| Communication | Information exchange between the host and embedded controller through socket communication |
+| Embedded controller: Raspberry Pi | Robot motion control, inverse-kinematics calculations, and execution of actuator commands |
+| Physical hardware | A 6-DOF robot arm, gripper, and servo drive system |
+
+This architecture separates perception, interaction, and decision-making from physical motion execution, allowing the modules to be developed and adjusted individually.
+
+### 3.4 Technologies and Differences Between Versions
+
+| Area | Technologies and processing |
+| :--- | :--- |
+| Object recognition | YOLO-based image recognition; detection coordinates, confidence scores, and visual information from images |
+| High-level decision-making | LLMs/VLMs, prompt design, target selection, and occlusion assessment |
+| Output and communication | Structured JSON selection results and socket communication |
+| Kinematics and control | Coordinate transformations, inverse kinematics, and servo control |
+| Hardware implementation | Raspberry Pi and a distributed host/embedded-controller architecture |
+| User interface | Speech recognition, speech synthesis, and a Streamlit UI |
+| Mechanical design and prototyping | CAD, SolidWorks, mechanical design, and prototyping |
+
+Early versions used ChatGPT. SKYNET-10 explored a transition to a local LLM and local speech processing, while SKYNET-11 and SKYNET-16 introduce decision-making using LLMs/VLMs that process visual information.
+
+**Model and speech-processing configurations must be distinguished by version.** This README does not specify the model names, API usage, or conditions for fully offline operation in SKYNET-11 or SKYNET-16. The description of local processing in SKYNET-10 should not be treated as a specification shared by all subsequent versions.
+
+---
+
+## 4. Individual Responsibilities and Team Development
+
+My work centers on the robot arm, with responsibilities in the following areas:
+
+- **Robot-arm control and inverse kinematics:** Development of motion calculations and robot-control components.
+- **YOLO integration:** Connecting object-recognition results to robot manipulation processes.
+- **LLM-based system design:** Designing the architecture that connects language understanding and high-level decision-making with perception and control modules.
+- **Project coordination:** Coordinating development with team members responsible for different parts of the project.
+
+This is a collaborative project. Overall system outcomes are distinguished from the responsibilities of individual contributors.
+
+### Team
+
+| Member | Main responsibilities | Affiliation / background |
+| :--- | :--- | :--- |
+| **HANG XINGCHEN / 杭 星辰** | Project Lead. Focused on embedded robotic systems, with responsibility for robot-arm control, inverse kinematics, image recognition (YOLO), integration of higher-level decision-making using LLMs/VLMs, and overall system design. | Kobe University |
+| **丸山 晴樹** | Prompt design; refinement of Japanese dialogue style and response wording; adaptation to cultural context. | The University of Tokyo |
+| **李 天洋** | CAD/SolidWorks-based 3D modeling, mechanical design, and prototyping; tuning of YOLO-based grasping and inverse kinematics. | Kobe University |
+| **田坂 風月** | Market and user research; implementation and evaluation of AI functions; agent behavior evaluation; usability testing; and suggestions for prototype improvements. | Kobe University |
+| **孫 羽杉** | System integration, socket communication, and backend development. | Kobe University |
+| **孫 妍** | Human behavior and robot interaction, prompt processing, and system behavior-logic design. | Kobe University |
+| **姜 啓龍** | Streamlit UI design and improvements to usability and user experience. | The University of Tokyo / background in design and software engineering |
+| **臼杵 星弥** | Support for system development and research activities. | Kobe University |
+
+---
+
+## 5. Demonstrations and Scope of Validation
+
+The publicly available material focuses on **the implementation and demonstration of a research prototype** connecting language, vision, and control.
+
+### Presented Capabilities
+
+| Capability | Development stage |
+| :--- | :--- |
+| Connecting language instructions to physical actions | SKYNET-5 |
+| Voice input and control | SKYNET-6.1 |
+| Grasping with YOLO and inverse kinematics | SKYNET-8 |
+| Local processing, UI, and host/embedded-controller architecture | SKYNET-10 |
+| Target selection among multiple candidates and structured output | SKYNET-11 |
+| Hierarchical target selection, geometry-based occlusion assessment, and physical execution | SKYNET-16 |
+
+### Quantitative Evaluation
+
+This README does not report quantitative results such as trial counts, grasping success rates, target-selection accuracy, occlusion-assessment accuracy, processing time, or position errors.
+
+The demonstration videos should therefore be viewed as individual examples of system behavior. They are not presented as comparative tests establishing a specific success rate, superiority over other methods, or reliability during extended continuous operation.
+
+### Scope and Limitations
+
+The public materials do not provide guarantees regarding:
+
+- Operation with arbitrary objects, lighting conditions, camera arrangements, or unfamiliar environments.
+- Comprehensive three-dimensional collision avoidance, reachability, or grasp stability.
+- Hard real-time control, deployment in industrial facilities, integration with PLCs, or compliance with industrial safety requirements.
+
+Details of post-execution observation, success/failure assessment, and retry handling are also not included in this README. The processing flow above should not be interpreted as evidence that all of these functions have been implemented.
+
+---
+
+## 6. Development History and Demonstration Videos
+
+The following records are arranged by version. Dates are not assigned to versions for which publication or development dates are not provided.
+
+### SKYNET-5 — Connecting Language Instructions to Physical Actions
+
+**[Demonstration video](https://www.youtube.com/watch?v=69e78PqmeNM&t=3s)**
+
+An early validation stage in which the system interprets simple language instructions and executes corresponding physical actions. This version establishes the foundation for connecting natural language to robot motion.
+
+### SKYNET-6 — Dialogue Expression and Japanese Responses
+
+**[Demonstration video](https://www.youtube.com/watch?v=lS7rUFcXonQ)**
+
+This version addresses dialogue and response wording for human interaction, including the use of Japanese honorific language.
+
+### SKYNET-6.1 — Voice Input and Control
+
+**[Demonstration video](https://www.youtube.com/watch?v=jr8Sl4M8Fsw)**
+
+Voice input and control are added, connecting spoken user instructions to robot operation.
+
+### SKYNET-8 — Grasping Through Visual Recognition and Inverse Kinematics
+
+**[Demonstration video](https://www.youtube.com/watch?v=Eo-8q8rrNC4)**
+
+YOLO-based object detection is integrated with inverse kinematics to recognize simple objects and initiate grasping actions. In addition to language instructions, this stage introduces manipulation using target positions obtained from images.
+
+### SKYNET-10 — Local Processing, UI, and Distributed Architecture
+
+**[Demonstration video](https://www.youtube.com/watch?v=zrWmjCPV1bM)**
+
+The development record for this version describes the following changes:
+
+- **Local LLM processing:** A transition from a configuration using the ChatGPT cloud API to a lightweight local LLM with domain-specific prompts.
+- **Local speech processing:** A transition to locally processed ASR and TTS.
+- **User interface:** A team-developed UI that brings configuration and operation together.
+- **Host/embedded-controller separation:** The host handles perception, interaction, and decision-making, while the Raspberry Pi handles kinematics calculations and actuator control.
+
+These descriptions apply to the SKYNET-10 configuration. This README does not report measurements quantifying improvements in response time or stability.
+
+### SKYNET-11 — Target Selection Among Multiple Objects
+
+**[Demonstration video](https://www.youtube.com/watch?v=l8yuPjlxAhg)**
+
+This version evaluates multiple detected candidates against user-specified selection criteria.
+
+It processes target coordinates, confidence scores, and color information. Annotated images, detection results in JSON format, and prompts describing the selection criteria are provided to a vision-capable LLM.
+
+Example selection criteria include prioritizing clean and undamaged objects, prioritizing objects near the center of the image, and applying tie-breaking rules when candidates receive the same priority.
+
+The result is returned as **structured JSON containing the target label, coordinates, and reasons for selection**. Target selection here refers to decision-making based on the specified criteria; it does not guarantee physical grasping performance or mathematical optimality.
+
+### SKYNET-16 — Hierarchical Target Selection, Occlusion Assessment, and Physical Execution
+
+**[Demonstration video](https://www.youtube.com/watch?v=7S0SW6Wzqks)**
+
+This version separates target selection, occlusion assessment, and inverse-kinematics-based execution into a hierarchical architecture.
+
+High-level decisions made by LLMs/VLMs are connected to grasping or occluder-removal actions through transformations into the robot coordinate frame and kinematics calculations. See “Featured Demonstration: SKYNET-16” for details.
+
+---
+
+## 7. Source-Code Availability, Research Outcomes, and Contact
+
+This repository forms part of a technical portfolio concerning technology for which a patent application is being prepared. For this reason, not all source code is publicly available.
+
+The core research outcomes of this project belong to the graduate school.
+
+This README introduces the research objectives, system architecture, demonstrations, development history, and individual responsibilities. It does not guarantee that the complete system can be reproduced using only the publicly available information.
+
+For inquiries regarding research collaboration, technical details, or potential adoption, please contact:
+
+- **Contact:** HANG XINGCHEN / 杭 星辰
+- **GitHub:** [hsingchen-dev](https://github.com/hsingchen-dev)
+- **E-mail:** [hsingchen.hang@outlook.jp](mailto:hsingchen.hang@outlook.jp)
+
+---
+
+**Robotic Manipulation — Grounded in mechanics and kinematics, connecting perception and high-level decisions to physical robot actions.**
