@@ -161,7 +161,7 @@ SKYNET-10の開発段階では、上位機と下位機を分離した構成を�
 
 | メンバー | 主な担当 | 所属・背景 |
 | :--- | :--- | :--- |
-| 杭 星辰 | プロジェクトリーダー。組込みロボットシステムを中心に、ロボットアーム制御、逆運動学、画像認識（YOLO）、LLM/VLMを用いた高次判断機能の統合、およびシステム全体の設計を担当。 | 神戸大学 |
+| 杭 星辰 | プロジェクトリーダー。組込みロボットシステムを中心に| 神戸大学 |
 | 丸山 晴樹 | プロンプト設計、日本語の対話スタイル・応答表現の調整、文化的文脈への対応 | 東京大学 |
 | 李 天洋 | CAD/SolidWorksによる3Dモデリング、機械設計・試作、YOLOを用いた把持と逆運動学的調整 | 神戸大学 |
 | 田坂 風月 | 市場・ユーザー調査、AI機能の実装・評価、エージェントの動作評価、ユーザビリティテスト、試作改善への提案 | 神戸大学 |
@@ -172,59 +172,6 @@ SKYNET-10の開発段階では、上位機と下位機を分離した構成を�
 
 本プロジェクトは共同開発です。システム全体の成果と、各メンバーが担当した範囲を区別して紹介しています。
 
-## チーム
-
-<table>
-  <thead>
-    <tr>
-      <th style="width: 120px; white-space: nowrap;">メンバー</th>
-      <th>主な担当</th>
-      <th style="width: 100px; white-space: nowrap;">所属・背景</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="white-space: nowrap;">杭 星辰</td>
-      <td>プロジェクトリーダー。組込みロボットシステムを中心に、ロボットアーム制御、逆運動学、画像認識（YOLO）、LLM/VLMを用いた高次判断機能の統合、およびシステム全体の設計を担当。</td>
-      <td style="white-space: nowrap;">神戸大学</td>
-    </tr>
-    <tr>
-      <td style="white-space: nowrap;">丸山 晴樹</td>
-      <td>プロンプト設計、日本語の対話スタイル・応答表現の調整、文化的文脈への対応</td>
-      <td style="white-space: nowrap;">東京大学</td>
-    </tr>
-    <tr>
-      <td style="white-space: nowrap;">李 天洋</td>
-      <td>CAD/SolidWorksによる3Dモデリング、機械設計・試作、YOLOを用いた把持と逆運動学的調整</td>
-      <td style="white-space: nowrap;">神戸大学</td>
-    </tr>
-    <tr>
-      <td style="white-space: nowrap;">田坂 風月</td>
-      <td>市場・ユーザー調査、AI機能の実装・評価、エージェントの動作評価、ユーザビリティテスト、試作改善への提案</td>
-      <td style="white-space: nowrap;">神戸大学</td>
-    </tr>
-    <tr>
-      <td style="white-space: nowrap;">孫 羽杉</td>
-      <td>システム統合、Socket通信、バックエンド開発</td>
-      <td style="white-space: nowrap;">神戸大学</td>
-    </tr>
-    <tr>
-      <td style="white-space: nowrap;">孫 妍</td>
-      <td>人間行動とロボットインタラクション、プロンプト処理、システムの行動ロジック設計</td>
-      <td style="white-space: nowrap;">神戸大学</td>
-    </tr>
-    <tr>
-      <td style="white-space: nowrap;">姜 啓龍</td>
-      <td>Streamlit UI設計、操作性・ユーザー体験の改善</td>
-      <td style="white-space: nowrap;">東京大学</td>
-    </tr>
-    <tr>
-      <td style="white-space: nowrap;">臼杵 星弥</td>
-      <td>システム開発および研究活動の支援</td>
-      <td style="white-space: nowrap;">神戸大学</td>
-    </tr>
-  </tbody>
-</table>
 
 
 ---
