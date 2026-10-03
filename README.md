@@ -166,7 +166,7 @@ This is a collaborative project. Overall system outcomes are distinguished from 
 | **SUN Yushan** | System integration, socket communication, and backend development. | Kobe University |
 | **SUN Yan** | Human behavior and robot interaction, prompt processing, and system behavior-logic design. | Kobe University |
 | **JIANG Qilong** | Streamlit UI design and improvements to usability and user experience. | The University of Tokyo / Design and Software Engineering |
-| **USUKI Seiya** | Support for system development and research activities. | Kobe University |
+| **USUKI SEIYA** | Support for system development and research activities. | Kobe University |
 
 
 
