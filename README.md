@@ -156,16 +156,19 @@ This is a collaborative project. Overall system outcomes are distinguished from 
 
 ### Team
 
+
 | Member | Main responsibilities | Affiliation / background |
 | :--- | :--- | :--- |
-| **HANG XINGCHEN / 杭 星辰** | Project Lead. Focused on embedded robotic systems, with responsibility for robot-arm control, inverse kinematics, image recognition (YOLO), integration of higher-level decision-making using LLMs/VLMs, and overall system design. | Kobe University |
-| **丸山 晴樹** | Prompt design; refinement of Japanese dialogue style and response wording; adaptation to cultural context. | The University of Tokyo |
-| **李 天洋** | CAD/SolidWorks-based 3D modeling, mechanical design, and prototyping; tuning of YOLO-based grasping and inverse kinematics. | Kobe University |
-| **田坂 風月** | Market and user research; implementation and evaluation of AI functions; agent behavior evaluation; usability testing; and suggestions for prototype improvements. | Kobe University |
-| **孫 羽杉** | System integration, socket communication, and backend development. | Kobe University |
-| **孫 妍** | Human behavior and robot interaction, prompt processing, and system behavior-logic design. | Kobe University |
-| **姜 啓龍** | Streamlit UI design and improvements to usability and user experience. | The University of Tokyo / background in design and software engineering |
-| **臼杵 星弥** | Support for system development and research activities. | Kobe University |
+| **HANG Xingchen ** | Project Lead. Focused on embedded robotic systems, with responsibility for robot-arm control, inverse kinematics, image recognition (YOLO), integration of higher-level decision-making using LLMs/VLMs, and overall system design. | Kobe University |
+| **MARUYAMA Haruki** | Prompt design; refinement of Japanese dialogue style and response wording; adaptation to cultural context. | The University of Tokyo |
+| **LI Tianyang ** | CAD/SolidWorks-based 3D modeling, mechanical design, and prototyping; tuning of YOLO-based grasping and inverse kinematics. | Kobe University |
+| **TASAKA FUZUKI** | Market and user research; implementation and evaluation of AI functions; agent behavior evaluation; usability testing; and suggestions for prototype improvements. | Kobe University |
+| **SUN Yushan ** | System integration, socket communication, and backend development. | Kobe University |
+| **SUN Yan ** | Human behavior and robot interaction, prompt processing, and system behavior-logic design. | Kobe University |
+| **JIANG Qilong ** | Streamlit UI design and improvements to usability and user experience. | The University of Tokyo / background in design and software engineering |
+| **USUKI SEIYA** | Support for system development and research activities. | Kobe University |
+
+
 
 ---
 
